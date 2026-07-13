@@ -1,5 +1,7 @@
 import express, { Request, Response } from "express";
 import urlRouter from "./urls.router.js"
+import redirectRouter from "./redirect.router.js"
+
 const router = express.Router();
 
 router.get('/', (_req: Request, res: Response) => {
@@ -7,5 +9,6 @@ router.get('/', (_req: Request, res: Response) => {
 })
 
 router.use('/url', urlRouter);
+router.use('/', redirectRouter);
 
 export default router;

@@ -20,10 +20,29 @@ const addURL = async (
         })
     } catch (e) {
         console.error(e)
+        return
     }
 
     return newURL;
 }
 
-const URLService = { addURL }
+const getOriginalUrl = async (
+    tx: Prisma.TransactionClient | PrismaClient,
+    short: string
+) => {
+    let original;
+
+    try {
+        original = await tx.urls.findFirst({
+            where: {
+                short: short
+            }
+        })
+    } catch (e) {
+        console.error(e);
+        return
+    }
+    return original?.original_url
+}
+const URLService = { addURL, getOriginalUrl }
 export default URLService

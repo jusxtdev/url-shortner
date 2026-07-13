@@ -16,6 +16,6 @@ const PORT = env.PORT || 3000;
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.use('/api', rootRouter);
+app.use('/', rootRouter);
 
 export { app, PORT }
