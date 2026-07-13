@@ -1,4 +1,4 @@
-import redirectController from "@/controller/redirect.controller.js";
+import redirectController from "../controller/redirect.controller.js";
 import express from "express"
 
 const router = express.Router()

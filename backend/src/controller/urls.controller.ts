@@ -1,6 +1,6 @@
-import { prisma } from "@/config/db.js"
-import { env } from "@/env.js"
-import URLService from "@/service/urls.service.js"
+import { prisma } from "../config/db.js"
+import { env } from "../env.js"
+import URLService from "../service/urls.service.js"
 import { Request, Response } from "express"
 
 const newURL = async (req: Request, res: Response) => {

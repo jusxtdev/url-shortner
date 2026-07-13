@@ -1,5 +1,5 @@
-import { prisma } from "@/config/db.js";
-import URLService from "@/service/urls.service.js";
+import { prisma } from "../config/db.js";
+import URLService from "../service/urls.service.js";
 import { Request, Response } from "express"
 
 const redirect = async (req: Request, res: Response) => {

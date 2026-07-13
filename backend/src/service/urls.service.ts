@@ -1,6 +1,7 @@
-import { Prisma } from "@/generated/prisma/client.js"
-import generateString from "@/utils/generateString.js";
 import { PrismaClient } from "@prisma/client/extension";
+import { Prisma } from "../generated/prisma/client.js"
+import generateString from "../utils/generateString.js";
+PrismaClient
 
 const addURL = async (
     tx: Prisma.TransactionClient | PrismaClient,
